@@ -1,0 +1,111 @@
+html, body {
+  height: 100%;
+  background: #DDDDDD;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: stretch;
+}
+.container:after {
+  display: block;
+  content: "";
+  margin: 9px;
+  flex: 999 999 auto;
+}
+.item {
+  flex: 0 0 auto;
+}
+
+.container_hor {
+  display: grid;
+  grid-template: 100% / 1fr 1fr;
+  grid-column-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header-top-bar {
+  margin: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #4e4e4e;
+  text-align: center;
+  background-color: #c76e2a;
+}
+.header-nav-bar ul {
+  /*position sticky permite que la barra de navegacion quede mientras se oculta el top-bar*/
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+  background-color: #2e2e2e;
+}
+.header-nav-bar li {
+  display: inline;
+}
+.header-nav-bar li a, .dropbtn {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  opacity: 60%;
+}
+.header-nav-bar li a:hover, .dropdown:hover .dropbtn{
+  background-color: #000000;
+}
+.header-nav-bar li.dropdown {
+  display: inline-block;
+}
+.header-nav-bar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  z-index: 1;
+  opacity: 80%;
+  margin-top: 10px;
+}
+.header-nav-bar .dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.header-nav-bar .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.header-nav-bar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.footer-container {
+  margin: 0;
+  top: 0;
+  padding: 10px;
+  border-top: 5px solid #c76e2a;
+  text-align: left;
+  color: #fff;
+  background-color: #2e2e2e;
+}
+.footer-row {
+  font-size: 13px;
+}
